@@ -109,3 +109,4 @@ show tables cena;
 
 
 delete from cena where id = 9;
+ 
