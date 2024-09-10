@@ -98,15 +98,56 @@ INSERT INTO cena (descricao) VALUES ('Cena 2.3: Durante as entrevistas, uma test
 
 INSERT INTO cena (descricao) VALUES ('Cena 3: Com as novas informações adquiridas, Gen decide de qualquer maneira manter seu foco na cena do crime e no melhor amigo da vítima Scott, pois acredita que apesar da perícia ser minuciosa algo às vezes pode passar batido.');
 
+INSERT INTO cena (descricao) VALUES ('Cena 4.1: Gen compartilha suas descobertas com Scott. Scott menciona que Joe Goldberg conhecia todas as vítimas e que tinha um comportamento estranho em relação a elas. 
+"Joe estava sempre perto das vítimas, antes e depois das mortes. Ele até deu uma carona para Jean algumas vezes.” ');
 
 
+INSERT INTO cena (descricao) VALUES ('Cena 4.2: Após Gen entregar a fibra de algodão manchada de sangue para Joe. Joe com um olhar desconfiado franziu a testa e mencionou que Scott anteriormente foi considerado suspeito pois na semana do primeiro assassinato ele foi visto comprando um carretel de linha daquela mesma fibra.  
+"Só não prosseguimos com a investigação em cima do Scott por falta de provas". ');
 
 
+INSERT INTO cena (descricao) VALUES ('Cena 4.3:  Após confrontar Scott sobre o carro, Scott se defende dizendo que não é só ele que possui o carro daquele modelo. 
+"A cidade é pequena e esse tipo de carro ainda não é popular aqui, acredito que você consiga investigar os donos dos poucos carros como esse, começando pelo Joe..." 
+');
 
-select * from cena;
-show tables cena;
+
+INSERT INTO cena (descricao) VALUES ('Cena 5: Com a descoberta de novas pistas cruciais, Gen se vê confusa com tantas informações inesperadas e para lidar melhor com a situação e continuar conduzindo a investigação, ela precisa ampliar seu campo de visão e acredita agora que deve duvidar até de uma formiga no chão... ');
 
 
+INSERT INTO cena (descricao) VALUES ('Cena 6.1:  “Por que, Gen? Desconfia de mim agora? Como policial eu fazia e costumo fazer patrulha a noite para garantir a segurança da cidade e foi numa dessas noites que dei carona para algumas, afim de evitar que algo de ruim acontecesse com elas”  
+');
 
-delete from cena where id = 9;
+
+INSERT INTO cena (descricao) VALUES ('Cena 6.2: Com suas principais suspeitas em cima de Scott, o mesmo reage alegando ser inocente e dizendo que foi ele quem a contratou por intermédio do xerife.  
+“Com todo respeito Gen, por que alguém que fosse culpado cooperaria com as investigações e até contrataria um novo detetive para solucionar o caso? Sim, foi eu quem sugeriu a sua contratação ao xerife. E quanto a uma das provas que estou diretamente ligado e por isso devo ser um dos principais suspeitos, acredito eu que não passa de uma mera coincidência, pois sou um artista nato e gosto de presentear pessoas próximas mim com presentes cuidadosamente feitos a mão, como foi o caso da Jean, dei a ela uma linda pulseira feita com fibra de algodão e miçangas.”  
+');
+
+
+INSERT INTO cena (descricao) VALUES ('Cena 6.3: Ao refazer seus passos, Gen descobre que apenas duas pessoas na cidade possuem o modelo de carro próximo ao local dos crimes. 
+“Esse caso está ficando mais difícil do que achei que era, agora a única coisa suspeita é o modelo de carro que aparentemente somente Scott Summers e Joe Goldberg possuem....”
+');
+
+
+INSERT INTO cena (descricao) VALUES ('Cena 7: Gen sente que o cerco está se fechando. Ela reuniu provas suficientes para confrontar o verdadeiro culpado, mas ainda está dividida entre Scott Summers e Joe Goldberg. As suspeitas são fortes para ambos, e qualquer movimento errado pode ser fatal.  
+Mais do que nunca, Gen decide que é hora de agir e decide escolher em quem confiar. As evidências a levaram a um ponto onde ela sabe que um dos dois está mentindo, mas ainda precisa de uma última peça do quebra-cabeça. Ela marca um encontro com ambos separadamente, fingindo estar indecisa, mas na verdade pronta para desmascarar o verdadeiro culpado. 
+');
+
+
+INSERT INTO cena (descricao) VALUES ('Cena 8.1:"Você confiou na pessoa errada e pagou o preço mais alto. Gen Winchester, uma jovem promissora, tornou-se mais uma vítima de um assassino que se esconde nas sombras. O verdadeiro horror não está apenas no ato, mas na traição que precedeu sua morte. Que essa tragédia seja um lembrete: no mundo da investigação, nem tudo é o que parece, e as aparências podem ser mortais." 
+Como tudo aconteceu:  Gen decide que Scott é o culpado e confia em Joe para ajudá-la a prendê-lo. Ela marca um encontro com Scott em um local isolado, com Joe a acompanhando para garantir sua segurança. No entanto, durante o encontro, Joe revela suas verdadeiras intenções...  
+Joe, aproveitando a oportunidade, ataca Gen enquanto ela está distraída, revelando que ele é o assassino. Ele tira um pedaço do fio de algodão que usou nos crimes anteriores e o utiliza para amarrar Gen. Em um ato cruel, ele a enforca com o mesmo fio que usou para matar as outras vítimas. Gen tenta resistir, mas é dominada e morre, tornando-se a mais recente vítima de Joe. Joe então foge da cidade, pronto para continuar seus crimes em outro lugar. 
+Joe: "Você foi tão fácil de manipular, Gen. Foi quase um jogo. E agora, assim como as outras, você será apenas mais uma história que nunca será contada." 
+Gen: (lutando para respirar) "Joe... você ... monstro..."  
+ ');
+
+
+INSERT INTO cena (descricao) VALUES ('Cena 8.2:  "Parabéns, você desvendou o mistério e trouxe justiça para as vítimas. Graças à sua perspicácia e coragem, Gen Winchester conseguiu desmascarar o assassino e impedir que ele tirasse mais vidas. A cidade de Lawrence pode finalmente respirar aliviada, mas lembre-se: o mal pode se esconder nos lugares mais inesperados. Mantenha seus instintos afiados e sua desconfiança sempre alerta." 
+Como tudo aconteceu: Gen e Scott armam um plano para expor Joe. Eles o chamam para um encontro sob o pretexto de que Gen encontrou novas provas que precisam ser analisadas. Joe, acreditando que pode manipular Gen, concorda em se encontrar com ela sozinho. 
+Quando Joe chega, Gen o confronta com todas as evidências que recolheu. Joe, percebendo que foi descoberto, tenta atacar Gen para escapar, mas Scott aparece a tempo de intervir. Em uma luta desesperada, Gen consegue se defender e dispara contra Joe, matando-o em legítima defesa. 
+Joe: "Você não deveria ter se intrometido, Gen. Agora, ninguém vai poder me parar." 
+ 
+Gen: "Você subestimou o quanto eu queria justiça para essas mulheres. Isso termina agora." 
+
+');
+
  
