@@ -16,6 +16,7 @@ create table inventario (
 	item_nome varchar (100),
 	descricao text,
 	foreign key (jogador_id) references jogador(id)
+	
 );
 
 create table cena (
@@ -71,6 +72,8 @@ FOREIGN KEY (personagem_id) REFERENCES personagem(id) ON DELETE SET NULL;
 
 insert into jogador (nome, idade) values ('Gen Winchester', 25);
 
+insert into prova (descricao) values ('fibra');
+
 INSERT INTO personagem (nome, descricao, papel) 
 VALUES 
 ('Scott Summers', 'Melhor amigo de Jean Gray e colega de quarto', 'Suspeito'),
@@ -97,6 +100,7 @@ INSERT INTO cena (descricao) VALUES ('Cena 2.3: Durante as entrevistas, uma test
 
 
 INSERT INTO cena (descricao) VALUES ('Cena 3: Com as novas informações adquiridas, Gen decide de qualquer maneira manter seu foco na cena do crime e no melhor amigo da vítima Scott, pois acredita que apesar da perícia ser minuciosa algo às vezes pode passar batido.');
+
 
 INSERT INTO cena (descricao) VALUES ('Cena 4.1: Gen compartilha suas descobertas com Scott. Scott menciona que Joe Goldberg conhecia todas as vítimas e que tinha um comportamento estranho em relação a elas. 
 "Joe estava sempre perto das vítimas, antes e depois das mortes. Ele até deu uma carona para Jean algumas vezes.” ');
@@ -150,4 +154,166 @@ Gen: "Você subestimou o quanto eu queria justiça para essas mulheres. Isso ter
 
 ');
 
- 
+
+UPDATE cena SET proxima_cena_a = 8, proxima_cena_b = 14, proxima_cena_c = 16 WHERE id = 7;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 8;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 14;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 15;
+
+UPDATE cena SET proxima_cena_a = 17, proxima_cena_b = 18, proxima_cena_c = 20 WHERE id = 16;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 17;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 18;
+
+UPDATE cena SET proxima_cena_a = 21, proxima_cena_b = 22, proxima_cena_c = 23 WHERE id = 20;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 21;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 22;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 23;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 24;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 25;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 26;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 27;
+
+UPDATE cena SET proxima_cena_a = NULL, proxima_cena_b = NULL, proxima_cena_c = NULL WHERE id = 28;
+
+
+select * from cena where id;
+
+
+INSERT INTO escolha (jogador_id, cena_id, escolha) 
+VALUES 
+(1, 8, 'Pedir os arquivos das mortes anteriores a Joe'),
+(1, 8, 'Visitar a cena do crime de Jean Gray'),
+(1, 8, 'Entrevistar testemunhas e familiares das vítimas'),
+(1,17, 'Compartilhar as novas descobertas com Scott'),
+(1,17, 'Entregar uma das provas encontradas'),
+(1,17, 'Suspeitar de Scott e confrotar o mesmo'),
+(1,22, 'Questionar Joe'),
+(1,22, 'Questionar Scott mais uma vez'),
+(1,22,'Refazer seus passos'),
+(1,26,'Confiar em Joe'),
+(1,26, 'Confiar em Scott');
+
+
+
+ALTER TABLE inventario 
+ADD prova_id INT;
+
+ALTER TABLE inventario 
+ADD CONSTRAINT fk_prova
+FOREIGN KEY (prova_id) REFERENCES prova(id);
+
+
+ALTER TABLE prova 
+ADD inventario_id INT;
+
+ALTER TABLE prova 
+ADD CONSTRAINT fk_inventario
+FOREIGN KEY (inventario_id) REFERENCES inventario(id);
+
+
+INSERT INTO inventario (jogador_id, prova_id , descricao) VALUES ( 1, NULL, 'Fibra');
+
+SELECT inventario.*, jogador.nome
+FROM inventario
+INNER JOIN jogador ON inventario.jogador_id = jogador.id;
+
+
+
+SELECT inventario.*, jogador.nome
+FROM inventario
+INNER JOIN jogador ON inventario.jogador_id = jogador.id;
+
+
+SELECT prova.*, jogador.nome
+FROM prova
+INNER JOIN jogador ON prova.jogador_id = jogador.id;
+
+
+SELECT prova.*, cena.descricao
+FROM prova
+INNER JOIN cena ON prova.cena_encontrada = cena.id;
+
+
+SELECT inventario.*, prova.descricao
+FROM inventario
+INNER JOIN prova ON inventario.prova_id = prova.id;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
