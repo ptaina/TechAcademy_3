@@ -33,11 +33,48 @@ $cenas = [
         'texto' => "As testemunhas revelam que viram um homem suspeito na área.",
         'opcoes' => [
             'Falar com testemunhas' => "Falar com mais testemunhas",
-            'Seguir o homem' => "Seguir o homem suspeito",
+            'Voltar' => "Voltar ao início"
+
+        ],
+        'dialogo' => '"Gostaria de falar com as pessoas que conheciam Jean e as outras vítimas. Às vezes, pequenos detalhes podem ser a chave."'
+    ],
+
+    'Segunda' => [
+        'texto' => "Com as novas informações adquiridas, Gen decide de qualquer maneira manter seu foco na cena do crime e no melhor amigo da vítima Scott, pois acredita que apesar da perícia ser minuciosa algo às vezes pode passar batido. 
+   
+. Escolha uma ação:",
+        'opcoes' => [
+            'A' => "Compartilhar as suas novas descobertas com Scott",
+            'B' => "Entregar uma das provas encontradas na cena do crime para seu parceiro Joe",
+            'C' => "Suspeitar de Scott e confrontá-lo",
+            'Sair' => "Sair do Jogo"
+        ]
+    ],
+    'estado_D' => [ // Resultado da escolha A
+        'texto' => "Com as novas informações adquiridas, Gen decide de qualquer maneira manter seu foco na cena do crime e no melhor amigo da vítima Scott, pois acredita que apesar da perícia ser minuciosa algo às vezes pode passar batido. ",
+        'opcoes' => [
+            'Continuar' => "Próxima cena",
+            'Sair' => "Sair do jogo"
+        ],
+        'dialogo' => '"Hey Scott, já que você era muito próximo de Jean, acho justo compartilhar as minhas novas descobertas"'
+    ],
+    'estado_E' => [ // Resultado da escolha B
+        'texto' => " Entregar uma das provas encontradas na cena do crime para seu parceiro Joe.",
+        'opcoes' => [
+            'Investigar lenço' => "Examinar o lenço",
+            'Continuar' => "Próxima cena",
+            'Voltar' => "Voltar ao início"
+        ],
+        'dialogo' => '"Joe, eu encontrei essa fibra no quarto de Jean. Quero que você me ajude a conectá-la com os outros casos. Talvez isso seja a chave para desvendarmos tudo"'
+    ],
+    'estado_F' => [ // Resultado da escolha C
+        'texto' => "As testemunhas revelam que viram um homem suspeito na área.",
+        'opcoes' => [
+            'Continuar' => "Próxima cena",
             'Voltar' => "Voltar ao início"
             
         ],
-        'dialogo' => '"Gostaria de falar com as pessoas que conheciam Jean e as outras vítimas. Às vezes, pequenos detalhes podem ser a chave."'
+        'dialogo' => 'Scott, o modelo do seu carro bate com a descrição do carro visto perto do local das últimas mortes, muita coincidência não acha?'
     ],
 
 ];
