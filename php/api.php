@@ -29,19 +29,17 @@ function atualizarEstado($acao) {
     }
 }
 
-/
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'])) {
     atualizarEstado($_POST['acao']);
     echo getEstado();
 } 
-
 else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     header('Content-Type: application/json');
     
     
-    $url = '...'; //colocar url da api, Tai
+    $url = 'https://api.exemplo.com/dados'; // Colocar o URL da API, Tai
     $response = file_get_contents($url); 
-    
     
     if ($response !== false) {
         echo $response; 
