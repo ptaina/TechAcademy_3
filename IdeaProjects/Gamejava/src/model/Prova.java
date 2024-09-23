@@ -2,6 +2,7 @@ package model;
 
 public class Prova {
     private Integer provaId;
+    private Integer jogadorId;
     private String descricao;
     private Cena cenaEncontrada;
     private Integer inventarioId;
@@ -14,12 +15,20 @@ public class Prova {
         this.provaId = provaId;
     }
 
-    public Integer getInventarioId() {
-        return inventarioId;
+    public Integer getJogadorId() {
+        return jogadorId;
     }
 
-    public void setInventarioId(Integer inventarioId) {
-        this.inventarioId = inventarioId;
+    public void setJogadorId(Integer jogadorId) {
+        this.jogadorId = jogadorId;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public Cena getCenaEncontrada() {
@@ -30,23 +39,12 @@ public class Prova {
         this.cenaEncontrada = cenaEncontrada;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public Integer getInventarioId() {
+        return inventarioId;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-
-    }
-
-    @Override
-    public String toString() {
-        return "Prova{" +
-                "provaId=" + provaId +
-                ", descricao='" + descricao + '\'' +
-                ", cenaEncontrada=" + cenaEncontrada +
-                ", inventarioId=" + inventarioId +
-                '}';
+    public void setInventarioId(Integer inventarioId) {
+        this.inventarioId = inventarioId;
     }
 }
 
