@@ -28,6 +28,9 @@ function atualizarEstado($acao) {
         case 'Iniciar':
             $_SESSION['estado'] = 'inicio';
             break;
+            case 'Help': 
+                $_SESSION['estado'] = 'help'; 
+                break;
     }
 }
 
