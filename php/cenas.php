@@ -14,21 +14,21 @@ $cenas = [
     'estado_A' => [
         'texto' => "Você escolheu a opção A! O que deseja fazer agora?",
         'opcoes' => [
-            'continuar' => "Continuar com A",
+            'continuar' => "Continuar",
             'voltar' => "Voltar ao início"
         ]
     ],
     'estado_B' => [
         'texto' => "Você escolheu a opção B! O que deseja fazer agora?",
         'opcoes' => [
-            'investigar' => "Investigar",
+            'continuar' => "Continuar",
             'voltar' => "Voltar ao início"
         ]
     ],
     'estado_C' => [
         'texto' => "Você escolheu a opção C! O que deseja fazer agora?",
         'opcoes' => [
-            'explorar' => "Explorar",
+            'continuar' => "Continuar",
             'voltar' => "Voltar ao início"
         ]
     ],
