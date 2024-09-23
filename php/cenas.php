@@ -35,6 +35,7 @@ $cenas = [
             'Falar com testemunhas' => "Falar com mais testemunhas",
             'Seguir o homem' => "Seguir o homem suspeito",
             'Voltar' => "Voltar ao início"
+            
         ],
         'dialogo' => '"Gostaria de falar com as pessoas que conheciam Jean e as outras vítimas. Às vezes, pequenos detalhes podem ser a chave."'
     ],
