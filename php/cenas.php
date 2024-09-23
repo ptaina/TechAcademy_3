@@ -80,4 +80,87 @@ $cenas = [
         'dialogo' => 'A cidade é pequena e esse tipo de carro ainda não é popular aqui, acredito que você consiga investigar os donos dos poucos carros como esse, começando pelo Joe..."'
     ],
 
+    'Terceira' => [
+        'texto' => "Com a descoberta de novas pistas cruciais, Gen se vê confusa com tantas informações inesperadas e para lidar melhor com a situação e continuar conduzindo a investigação, ela precisa ampliar seu campo de visão e acredita agora que deve duvidar até de uma formiga no chão.... 
+   
+. Escolha uma ação:",
+        'opcoes' => [
+            'A' => "Perguntar ao seu parceiro Joe se ele possuía algum tipo de relação com alguma das vítimas:",
+            'B' => "Questionar Scott mais uma vez",
+            'C' => "Suspeitar de Scott e confrontá-lo",
+            'Sair' => "Sair do Jogo"
+        ]
+    ],
+    'estado_G' => [ // Resultado da escolha 6.1
+        'texto' => "Joe, você conhecia algumas da vítimas antes dos assinatores aconteceram? Soube que você já deu até carona para algumas delas...",
+        'opcoes' => [
+            'Continuar' => "Próxima cena",
+            'Sair' => "Sair do jogo"
+        ],
+        'textoR' => '',
+        'dialogo' => '“Por que, Gen? Desconfia de mim agora? Como policial eu fazia e costumo fazer patrulha a noite para garantir a segurança da cidade e foi numa dessas noites que dei carona para algumas, afim de evitar que algo de ruim acontecesse com elas”  
+'
+    ],
+    'estado_H' => [ // Resultado da escolha 6.2
+        'texto' => "Scott, eu soube que você comprou um carretel de linha na semana do primeiro assassinato e que coincidentemente é o mesmo tipo encontrado no seu quarto e da Jean, e nas outras cenas de crime? Isso não é algo que podemos ignorar",
+        'opcoes' => [
+            'Continuar' => "Próxima cena",
+            'Voltar' => "Voltar ao início"
+        ],
+        'textoR' => "Com suas principais suspeitas em cima de Scott, o mesmo reage alegando ser inocente e dizendo que foi ele quem a contratou por intermédio do xerife.  
+ ",
+        'dialogo' => '"Com todo respeito Gen, por que alguém que fosse culpado cooperaria com as investigações e até contrataria um novo detetive para solucionar o caso? Sim, foi eu quem sugeriu a sua contratação ao xerife. E quanto a uma das provas que estou diretamente ligado e por isso devo ser um dos principais suspeitos, acredito eu que não passa de uma mera coincidência, pois sou um artista nato e gosto de presentear pessoas próximas mim com presentes cuidadosamente feitos a mão, como foi o caso da Jean, dei a ela uma linda pulseira feita com fibra de algodão e miçangas"'
+    ],
+    'estado_I' => [ // Resultado da escolha 6.3
+        'texto' => "“Acho melhor visitar novamente as cenas dos crimes e ver se encontro algo melhor que uma fibra de linha de algodão, quem sabe acho até um veículo suspeito?! “ 
+",
+        'opcoes' => [
+            'Continuar' => "Próxima cena",
+            'Voltar' => "Voltar ao início"
+            
+        ],
+        'textoR' => "  Ao refazer seus passos, Gen descobre que apenas duas pessoas na cidade possuem o modelo de carro próximo ao local dos crimes. 
+",
+        'dialogo' => '“Esse caso está ficando mais difícil do que achei que era, agora a única coisa suspeita é o modelo de carro que aparentemente somente Scott Summers e Joe Goldberg possuem....” "'
+    ],
+
+    
+    'Quarta' => [
+        'texto' => "Gen sente que o cerco está se fechando. Ela reuniu provas suficientes para confrontar o verdadeiro culpado, mas ainda está dividida entre Scott Summers e Joe Goldberg. As suspeitas são fortes para ambos, e qualquer movimento errado pode ser fatal.  
+Mais do que nunca, Gen decide que é hora de agir e decide escolher em quem confiar. As evidências a levaram a um ponto onde ela sabe que um dos dois está mentindo, mas ainda precisa de uma última peça do quebra-cabeça. Ela marca um encontro com ambos separadamente, fingindo estar indecisa, mas na verdade pronta para desmascarar o verdadeiro culpado.
+.. 
+   
+. Escolha uma ação:",
+        'opcoes' => [
+            'A' => "Confiar em Joe Goldberg",
+            'B' => "Congiar em Scott Summers",
+            'Sair' => "Sair do Jogo"
+        ]
+    ],
+    'estado_j' => [ // Resultado da escolha 8.1
+        'texto' => "“Joe, como você é um amigo de longa data estou te confidencializando minhas conclusões para este caso, estou convencida de que Scott está escondendo algo. Precisamos confrontá-lo juntos e descobrir a verdade.”",
+        'opcoes' => [
+            'Continuar' => "Próxima cena",
+            'Sair' => "Sair do jogo"
+        ],
+        'textoR' => ' Gen resolve que a única maneira de obter respostas é confiar em Joe. Ela acredita que Scott está tentando desviar as suspeitas e decide se unir a Joe para confrontar Scott juntos.  
+',
+        'dialogo' => '“"Você confiou na pessoa errada e pagou o preço mais alto. Gen Winchester, uma jovem promissora, tornou-se mais uma vítima de um assassino que se esconde nas sombras. O verdadeiro horror não está apenas no ato, mas na traição que precedeu sua morte. Que essa tragédia seja um lembrete: no mundo da investigação, nem tudo é o que parece, e as aparências podem ser mortais." 
+”  
+'
+    ],
+    'estado_k' => [ // Resultado da escolha 8.2
+        'texto' => '"Scott, acredito que você estava tentando me ajudar o tempo todo. Precisamos armar uma cilada para Joe. Ele é o único que pode ser o culpado, e temos que agir rápido."',
+        'opcoes' => [,
+            'Continuar' => "Próxima cena",
+            'Voltar' => "Voltar ao início"
+        ],
+        'textoR' => " Gen e Scott armam um plano para expor Joe. Eles o chamam para um encontro sob o pretexto de que Gen encontrou novas provas que precisam ser analisadas. Joe, acreditando que pode manipular Gen, concorda em se encontrar com ela sozinho. 
+.   
+ ",
+        'dialogo' => '"Parabéns, você desvendou o mistério e trouxe justiça para as vítimas. Graças à sua perspicácia e coragem, Gen Winchester conseguiu desmascarar o assassino e impedir que ele tirasse mais vidas. A cidade de Lawrence pode finalmente respirar aliviada, mas lembre-se: o mal pode se esconder nos lugares mais inesperados. Mantenha seus instintos afiados e sua desconfiança sempre alerta." 
+'
+    ],
+
+
 ];
