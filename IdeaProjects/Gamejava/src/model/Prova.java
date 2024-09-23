@@ -1,5 +1,9 @@
 package model;
 
+import java.sql.SQLException;
+
+import static repository.CenaDao.findCenaById;
+
 public class Prova {
     private Integer provaId;
     private Integer jogadorId;
@@ -35,9 +39,14 @@ public class Prova {
         return cenaEncontrada;
     }
 
-    public void setCenaEncontrada(Cena cenaEncontrada) {
-        this.cenaEncontrada = cenaEncontrada;
+    public void setCenaEncontrada(int cenaId) {
+        try {
+            this.cenaEncontrada = findCenaById(cenaId);
+        } catch (SQLException e) {
+            e.printStackTrace(); // Ou trate a exceção de forma apropriada
+        }
     }
+
 
     public Integer getInventarioId() {
         return inventarioId;
