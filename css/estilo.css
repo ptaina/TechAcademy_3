@@ -69,5 +69,17 @@ a:hover {
     text-decoration: underline;
 }
 
+@media (max-width: 600px) {
+    #cena {
+        width: 90%;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+
 
 
