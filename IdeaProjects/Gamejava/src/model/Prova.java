@@ -36,5 +36,18 @@ public class Prova {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+
+    }
+
+    @Override
+    public String toString() {
+        return "Prova{" +
+                "provaId=" + provaId +
+                ", descricao='" + descricao + '\'' +
+                ", cenaEncontrada=" + cenaEncontrada +
+                ", inventarioId=" + inventarioId +
+                '}';
     }
 }
+
+
