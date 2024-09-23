@@ -39,7 +39,7 @@ else if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     
     
     $url = 'https://api.exemplo.com/dados'; // Colocar o URL da API, Tai
-    $response = file_get_contents($url); 
+    $response = @file_get_contents($url);
     
     if ($response !== false) {
         echo $response; 
