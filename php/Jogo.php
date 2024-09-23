@@ -31,6 +31,7 @@ function atualizarEstado($acao) {
             case 'Help': 
                 $_SESSION['estado'] = 'help'; 
                 break;
+            
     }
 }
 
@@ -90,6 +91,6 @@ switch ($_SESSION['estado']) {
     <div id="jogo">
         <?php echo $cena; ?>
     </div>
-    <a href="index.php">Voltar ao Início</a>
+    <a href="index.php">Voltar ao começo</a>
 </body>
 </html>
