@@ -67,14 +67,9 @@ public class EscolhaDao {
     }
 
     public static void deleteEscolha(Integer id) throws SQLException {
-        Connection conn = Mysql.getConnection();
-        String sql = "DELETE FROM escolha WHERE escolha_id = ?";
-        PreparedStatement stmt = conn.prepareStatement(sql);
-        stmt.setInt(1, id);
 
-        stmt.executeUpdate();
+    }
 
-        stmt.close();
-        conn.close();
+    public static void createEscolha(Integer jogadorId, int i, String s) {
     }
 }

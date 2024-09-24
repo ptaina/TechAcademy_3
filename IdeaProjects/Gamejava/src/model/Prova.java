@@ -43,7 +43,7 @@ public class Prova {
         try {
             this.cenaEncontrada = findCenaById(cenaId);
         } catch (SQLException e) {
-            e.printStackTrace(); // Ou trate a exceção de forma apropriada
+            e.printStackTrace();
         }
     }
 
