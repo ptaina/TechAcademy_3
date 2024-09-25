@@ -100,8 +100,8 @@ public class Main {
                 System.out.println("Cena 5: Com a descoberta de novas pistas cruciais, Gen se vê confusa com tantas informações inesperadas e para lidar melhor com a situação e continuar conduzindo a investigação, ela precisa ampliar seu campo de visão e acredita agora que deve duvidar até de uma formiga no chão... ");
                         System.out.println("Escolhas:");
                 System.out.println("1. Perguntar ao seu parceiro Joe se ele possuía algum tipo de relação com alguma das vítimas:\n"+"\"Joe, você conhecia alguma das vítimas antes dos assassinatos aconteceram? Soube que você já deu até carona para algumas delas... \"\n");
-                System.out.println("2. Questionar Scott mais uma vez: -Scott, eu soube que você comprou um carretel de linha na semana do primeiro assassinato e que coincidentemente é do mesmo tipo encontrado no seu quarto e da Jean e nas outras cenas de crime? Isso não é algo que podemos ignorar...");
-                System.out.println("3. Refazer seus passos para verificar se não está deixando nada escapar:-Acho melhor visitar novamente as cenas dos crimes e ver se encontro algo melhor que uma fibra de linha de algodão, quem sabe acho até um veículo suspeito?! ");
+                System.out.println("2. Questionar Scott mais uma vez:\n"+ "\"Scott, eu soube que você comprou um carretel de linha na semana do primeiro assassinato e que coincidentemente é do mesmo tipo encontrado no seu quarto e da Jean e nas outras cenas de crime? Isso não é algo que podemos ignorar...\"\n");
+                System.out.println("3. Refazer seus passos para verificar se não está deixando nada escapar:\n"+"\"Acho melhor visitar novamente as cenas dos crimes e ver se encontro algo melhor que uma fibra de linha de algodão, quem sabe acho até um veículo suspeito?! \"\n");
 
                 escolha = scanner.nextInt(); // Recebe a nova escolha
                 processarEscolha(jogador, escolha);
