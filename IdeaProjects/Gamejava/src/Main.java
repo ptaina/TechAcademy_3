@@ -11,11 +11,11 @@ public class Main {
         Jogador jogador;
 
         try {
-            // Tentando encontrar o jogador pelo ID (1 como exemplo)
+            // Tentando encontrar o jogador pelo ID
             jogador = JogadorDao.findJogadorById(1);
 
             if (jogador == null) {
-                // Criar um novo jogador se ele não existir
+                // cria um novo jogador se ele não existir
                 jogador = new Jogador(null, "Gen Winchester", 25, 0);
                 JogadorDao.createJogador(jogador);
                 System.out.println("Novo jogador criado: " + jogador.getNome());
@@ -33,7 +33,7 @@ public class Main {
                 }
             }
 
-            // Iniciar a lógica do jogo
+
             iniciarJogo(jogador, scanner);
 
         } catch (SQLException e) {
@@ -46,13 +46,13 @@ public class Main {
         int escolha = -1;
 
         while (true) {
-            // Adiciona uma opção de 'help' no início de cada rodada
+
             System.out.println("Digite 'help' para ver as instruções ou 'proceed' para continuar.");
             String comando = scanner.next();
 
             if (comando.equalsIgnoreCase("help")) {
                 mostrarAjuda();
-                continue; // Volta ao início do loop para reexibir o prompt de ação
+                continue; // Volta ao início
             } else if (!comando.equalsIgnoreCase("proceed")) {
                 System.out.println("Comando inválido.");
                 continue;
@@ -64,34 +64,34 @@ public class Main {
                     progresso = 1; // Avança para a próxima cena
                     break;
                 case 1:
-                    System.out.println("Cena 1: Você chega ao escritório do xerife já acompanhada por Joe Goldberg e são recepcionados por Scott Summers na porta de entrada, que parece exausto e ansioso. Joe a apresenta ao xerife e deixa Scott explicar que a sua colega de quarto Jean Gray foi brutalmente assassinada, assim como várias outras mulheres antes dela. Gen decide que é hora de botar a mão na massa: ");
+                    System.out.println("Cena 1: Você chega ao escritório do xerife já acompanhada por Joe Goldberg e é recepcionada por Scott Summers na porta de entrada, que parece exausto e ansioso. Joe a apresenta ao xerife e deixa Scott explicar que a sua colega de quarto Jean Gray foi brutalmente assassinada, assim como várias outras mulheres antes dela. Gen decide que é hora de botar a mão na massa: ");
                     System.out.println("Escolhas:");
-                    System.out.println("1. Pedir os arquivos das mortes anteriores a Joe: -Joe, preciso de todos os arquivos das mortes anteriores. Quero ver se há algum padrão que possamos identificar.");
-                    System.out.println("2. Visitar a cena do crime de Jean Gray: -Scott, já que a cena do crime é o quarto que você e a Jean compartilhavam, será que poderia me levar até lá? Quero ver se há algo que os investigadores possam ter perdido.");
-                    System.out.println("3. Entrevistar testemunhas e familiares das vítimas: -Gostaria de falar com as pessoas que conheciam Jean e as outras vítimas. Às vezes, pequenos detalhes podem ser a chave.");
+                    System.out.println("1. Pedir os arquivos das mortes anteriores a Joe:\n" + "\"Joe, preciso de todos os arquivos das mortes anteriores. Quero ver se há algum padrão que possamos identificar.\"\n" );
+                    System.out.println("2. Visitar a cena do crime de Jean Gray: \n" + "\" Scott, já que a cena do crime é o quarto que você e a Jean compartilhavam, será que poderia me levar até lá? Quero ver se há algo que os investigadores possam ter perdido.\"\n");
+                    System.out.println("3. Entrevistar testemunhas e familiares das vítimas: \n" + "\" Gostaria de falar com as pessoas que conheciam Jean e as outras vítimas. Às vezes, pequenos detalhes podem ser a chave.\"\n");
 
                     escolha = scanner.nextInt(); // Recebe a escolha
                     processarEscolha(jogador, escolha);
                     progresso = 2; // Avança para a próxima cena
                     break;
                 case 2:
-                    mostrarResultadoEscolha1(escolha); // Exibe o resultado da escolha anterior
+                    mostrarResultadoEscolha1(escolha);
                     progresso = 3; // Avança para a próxima cena de ação
                     break;
 
                 case 3:
                     System.out.println("Cena 3: Cena do Crime: Com as novas informações adquiridas, Gen decide manter seu foco na cena do crime e em Scott, pois acredita que algo pode ter passado despercebido.");
                     System.out.println("Escolhas:");
-                    System.out.println("1. Compartilhar as suas novas descobertas com Scott: -Hey Scott, já que você era muito próximo de Jean, acho justo compartilhar as minhas novas descobertas.");
-                    System.out.println("2. Entregar uma das provas encontradas na cena do crime para seu parceiro Joe: -Joe, eu encontrei essa fibra no quarto de Jean. Quero que você me ajude a conectá-la com os outros casos.");
-                    System.out.println("3. Suspeitar de Scott e confrontá-lo: -Scott, o modelo do seu carro bate com a descrição do carro visto perto do local das últimas mortes. Muita coincidência, não acha?");
+                    System.out.println("1. Compartilhar as suas novas descobertas com Scott: \n" + "\"Hey Scott, já que você era muito próximo de Jean, acho justo compartilhar as minhas novas descobertas.\"\n");
+                    System.out.println("2. Entregar uma das provas encontradas na cena do crime para seu parceiro Joe: \n"+ "\"Joe, eu encontrei essa fibra no quarto de Jean. Quero que você me ajude a conectá-la com os outros casos.\"\n");
+                    System.out.println("3. Suspeitar de Scott e confrontá-lo: \n" + "\"Scott, o modelo do seu carro bate com a descrição do carro visto perto do local das últimas mortes. Muita coincidência, não acha?\"\n");
 
                     escolha = scanner.nextInt(); // Recebe a nova escolha
                     processarEscolha(jogador, escolha);
                     progresso = 4; // Avança para a próxima cena
                     break;
                 case 4:
-                    mostrarResultadoEscolha2(escolha); // Exibe o resultado da escolha anterior
+                    mostrarResultadoEscolha2(escolha);
                     progresso = 5; // Avança para a próxima cena de ação
                     break;
 
@@ -99,7 +99,7 @@ public class Main {
                 case 5:
                 System.out.println("Cena 5: Com a descoberta de novas pistas cruciais, Gen se vê confusa com tantas informações inesperadas e para lidar melhor com a situação e continuar conduzindo a investigação, ela precisa ampliar seu campo de visão e acredita agora que deve duvidar até de uma formiga no chão... ");
                         System.out.println("Escolhas:");
-                System.out.println("1. Perguntar ao seu parceiro Joe se ele possuía algum tipo de relação com alguma das vítimas:-Joe, você conhecia alguma das vítimas antes dos assassinatos aconteceram? Soube que você já deu até carona para algumas delas... ");
+                System.out.println("1. Perguntar ao seu parceiro Joe se ele possuía algum tipo de relação com alguma das vítimas:\n"+"\"Joe, você conhecia alguma das vítimas antes dos assassinatos aconteceram? Soube que você já deu até carona para algumas delas... \"\n");
                 System.out.println("2. Questionar Scott mais uma vez: -Scott, eu soube que você comprou um carretel de linha na semana do primeiro assassinato e que coincidentemente é do mesmo tipo encontrado no seu quarto e da Jean e nas outras cenas de crime? Isso não é algo que podemos ignorar...");
                 System.out.println("3. Refazer seus passos para verificar se não está deixando nada escapar:-Acho melhor visitar novamente as cenas dos crimes e ver se encontro algo melhor que uma fibra de linha de algodão, quem sabe acho até um veículo suspeito?! ");
 
@@ -108,7 +108,7 @@ public class Main {
                 progresso = 6; // Avança para a próxima cena
                 break;
                 case 6:
-                    mostrarResultadoEscolha3(escolha); // Exibe o resultado da escolha anterior
+                    mostrarResultadoEscolha3(escolha);
                     progresso = 7; // Avança para a próxima cena de ação
                     break;
 
@@ -128,14 +128,14 @@ public class Main {
                     jogador.setProgressoCena(progresso);
                     salvarProgresso(jogador);
 
-                    return; // Encerra o jogo
+                    return; // Acaba tudo aqui Mari
 
             }
     }
     }
-        
+    //E aqui começa os métodos para mostrar as respostas e o negócio do help
 
-    //exibe ajuda
+
     private static void mostrarAjuda () {
         System.out.println("Ajuda do Jogo:");
         System.out.println("1. Escolha as opções de 1 a 3 quando forem apresentadas.");
@@ -147,7 +147,7 @@ public class Main {
     }
 
 
-    // Processa as escolhas do jogador
+    // as escolhas do jogador
     private static void processarEscolha(Jogador jogador, int escolha) {
         String descricao = "";
         switch (escolha) {
@@ -168,11 +168,11 @@ public class Main {
         EscolhaDao.createEscolha(jogador.getJogadorId(), escolha, descricao);
     }
 
-    // Mostra o resultado da primeira escolha
+    //  resultado da primeira escolha
     private static void mostrarResultadoEscolha1(int escolha) {
         switch (escolha) {
             case 1:
-                System.out.println("Cena 2.1: Joe entrega os arquivos a Gen, que passa a noite analisando-os. Ela percebeu que todas as vítimas eram mulheres ruivas, altas, magras e tinham entre 20 e 30 anos. \n");
+                System.out.println("Cena 2.1: Joe entrega os arquivos a Gen, que passa a noite analisando-os. Ela percebeu que todas as vítimas eram mulheres ruivas, altas, magras e tinham entre 20 e 30 anos.");
                 break;
             case 2:
                 System.out.println("Cena 2.2: Na cena do crime de Jean Gray, o quarto está revirado, com móveis desalinhados e sinais de luta. Gen observa atentamente cada detalhe, buscando qualquer pista que possa ter escapado aos investigadores anteriores. Sob a cama, algo chama sua atenção. É um pequeno pedaço de fibra de algodão manchada de sangue, quase imperceptível em meio à poeira e aos destroços. \n" +
@@ -186,7 +186,7 @@ public class Main {
 
     }
 
-    // Mostra o resultado da segunda escolha
+    //resultado da segunda escolha
     private static void mostrarResultadoEscolha2(int escolha) {
         switch (escolha) {
             case 1:
@@ -204,11 +204,11 @@ public class Main {
         }
     }
 
-    // Mostra o resultado da terceira escolha
+    //  resultado da terceira escolha
     private static void mostrarResultadoEscolha3(int escolha) {
         switch (escolha) {
             case 1:
-                System.out.println("Cena 6.1: - Por que, Gen? Desconfia de mim agora? Como policial eu fazia e costumo fazer patrulha a noite para garantir a segurança da cidade e foi numa dessas noites que dei carona para algumas, afim de evitar que algo de ruim acontecesse com elas");
+                System.out.println("Cena 6.1: \n" + "\" Por que, Gen? Desconfia de mim agora? Como policial eu fazia e costumo fazer patrulha a noite para garantir a segurança da cidade e foi numa dessas noites que dei carona para algumas, afim de evitar que algo de ruim acontecesse com elas.\"\n");
                 break;
             case 2:
                 System.out.println("Cena 6.2: Com suas principais suspeitas em cima de Scott, o mesmo reage alegando ser inocente e dizendo que foi ele quem a contratou por intermédio do xerife.  \n" +
@@ -221,7 +221,7 @@ public class Main {
         }
     }
 
-    // Processa a escolha final do jogador
+    //  escolha final do jogador
     private static void processarEscolhaFinal(Jogador jogador, int escolha) {
         if (escolha == 1) {
             System.out.println( "Cena 8.1: Você confiou na pessoa errada e pagou o preço mais alto. Gen Winchester, uma jovem promissora, tornou-se mais uma vítima de um assassino que se esconde nas sombras. O verdadeiro horror não está apenas no ato, mas na traição que precedeu sua morte. Que essa tragédia seja um lembrete: no mundo da investigação, nem tudo é o que parece, e as aparências podem ser mortais. Como tudo aconteceu:  Gen decide que Scott é o culpado e confia em Joe para ajudá-la a prendê-lo. Ela marca um encontro com Scott em um local isolado, com Joe a acompanhando para garantir sua segurança. No entanto, durante o encontro, Joe revela suas verdadeiras intenções... Joe, aproveitando a oportunidade, ataca Gen enquanto ela está distraída, revelando que ele é o assassino. Ele tira um pedaço do fio de algodão que usou nos crimes anteriores e o utiliza para amarrar Gen. Em um ato cruel, ele a enforca com o mesmo fio que usou para matar as outras vítimas. Gen tenta resistir, mas é dominada e morre, tornando-se a mais recente vítima de Joe. Joe então foge da cidade, pronto para continuar seus crimes em outro lugar. Joe: Você foi tão fácil de manipular, Gen. Foi quase um jogo. E agora, assim como as outras, você será apenas mais uma história que nunca será contada. Gen: (lutando para respirar) Joe... você ... monstro... " );
