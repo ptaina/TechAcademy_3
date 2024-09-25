@@ -119,7 +119,7 @@ public class Main {
 
                     System.out.println("Escolhas:");
                     System.out.println("1. Confiar em Joe Goldberg: Gen resolve que a única maneira de obter respostas é confiar em Joe. Ela acredita que Scott está tentando desviar as suspeitas e decide se unir a Joe para confrontar Scott juntos. \n"+ "\"Joe, como você é um amigo de longa data estou te confidencializando minhas conclusões para este caso, estou convencida de que Scott está escondendo algo. Precisamos confrontá-lo juntos e descobrir a verdade.\"\n");
-                    System.out.println("2. Confiar em Scott Summers: Gen decide que precisa confiar em Scott. Algo na maneira como Joe reagiu às perguntas anteriores deixou Gen desconfiada. Ela se encontra com Scott em particular para discutir o próximo passo. -Scott, acredito que você estava tentando me ajudar o tempo todo. Precisamos armar uma cilada para Joe. Ele é o único que pode ser o culpado, e temos que agir rápido.");
+                    System.out.println("2. Confiar em Scott Summers: Gen decide que precisa confiar em Scott. Algo na maneira como Joe reagiu às perguntas anteriores deixou Gen desconfiada. Ela se encontra com Scott em particular para discutir o próximo passo. \n"+ "\"Scott, acredito que você estava tentando me ajudar o tempo todo. Precisamos armar uma cilada para Joe. Ele é o único que pode ser o culpado, e temos que agir rápido.\"\n");
 
                     escolha = scanner.nextInt(); // Recebe a escolha final
                     processarEscolhaFinal(jogador, escolha);
