@@ -36,7 +36,7 @@ public class EscolhaDao {
 
         return escolha;
     }
-
+// Mari a gente não usou, mas vou deixar assim ok?
     public static void createEscolha(Escolha escolha) throws SQLException {
         Connection conn = Mysql.getConnection();
         String sql = "INSERT INTO escolha (jogador_id, cena_id, escolha) VALUES (?, ?, ?)";
